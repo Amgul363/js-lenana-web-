@@ -17,6 +17,9 @@ export default function App() {
         <Route path="/academics" element={<Academics />}></Route>
         <Route path="/staff" element={<Staff />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/academics/sciences" element={<Science />}/>
+        <Route path="/academics/mathematics" element={<Mathematics />}/>
+
       </Routes>
     </>
   )

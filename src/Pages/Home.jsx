@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import './Home.css'
 import hero from '../assets/Images/hero-placeholder.jpg'
 import gallery1 from '../assets/Images/gallery1.jpg'
@@ -16,8 +17,8 @@ export default function Home (){
         <img src={hero} alt='Hero' className="hero-image" />
         <div className='hero-text'>
           <h1>Welcome to Lenana Junior Sec School Narok</h1>
-          <p>To empower young Kenyans through quality education</p>
-          <button>Learn More</button>
+          <p>We empower young Kenyans through quality education</p>
+          <Link to="/about" className='hero-text-btn'>Learn More</Link>
         </div>
       </section>
 
@@ -34,10 +35,10 @@ export default function Home (){
     <section className='academics'>
       <h2>Academics</h2>
       <div className='academic-cards'>
-        <div className='card'> Sciences</div>
-        <div className='card'> Mathematics</div>
-        <div className='card'> Languages</div>
-        <div className='card'> Humanities</div>
+        <Link to="/academics/sciences" className='card'>Sciences</Link>
+        <Link to="/academics/mathematics" className='card'>Mathematics</Link>
+        <Link to="/academics/languages" className='card'>Languages</Link>
+        <Link to="/academics/humanities" className='card'>Humanities</Link>
       </div>
     </section>
 

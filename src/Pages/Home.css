@@ -38,17 +38,18 @@
 }
 
 
-.hero-text button{
-  background-color: rgb(0,123,255);
+.hero-text-btn{
+  background-color: rgb(30, 63, 99);
+  text-decoration: none;
   border:none;
   color:white;
-  padding:10px 25px;
+  padding:10px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 4px;
 }
 
-.hero-text button:hover{
+.hero-text-btn:hover{
   background-color: rgb(0,105,217);
 }
 
