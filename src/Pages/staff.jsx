@@ -1,5 +1,5 @@
 export default function Staff (){
   return (
-    <>Staff page</>
+    <h1>Staff page</h1>
   )
 }

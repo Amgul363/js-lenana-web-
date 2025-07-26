@@ -1,5 +1,5 @@
 export default function Academics (){
   return (
-    <>Academics page</>
+    <h1>Academics page</h1>
   )
 }
