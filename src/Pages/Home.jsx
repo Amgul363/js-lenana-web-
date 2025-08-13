@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import './Home.css'
 import hero from '../assets/Images/hero-placeholder.jpg'
 import gallery1 from '../assets/Images/gallery1.jpg'
@@ -12,78 +11,73 @@ import gallery6 from '../assets/Images/gallery6.jpg'
 export default function Home() {
   const [showAll, setShowAll] = useState(false)
   const allImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6]
-  const visibleImages = showAll ? allImages : allImages.slice(0, 3);
+  const visibleImages = showAll ? allImages : allImages.slice(0, 3)
 
-  const [expandedImg, setExpandedImg] = useState(null);
-
+  const [expandedImg, setExpandedImg] = useState(null)
 
   return (
-
     <div className='homepage'>
 
-      {/*Hero section*/}
+      {/* Hero section */}
       <section className='hero'>
         <img src={hero} alt='Hero' className="hero-image" />
         <div className='hero-text'>
           <h1>Welcome to Lenana Junior School Narok</h1>
           <p>We empower young Kenyans through quality education</p>
-          <Link to="/about" className='hero-text-btn'>Learn More</Link>
+          <a href="/about" className='hero-text-btn'>Learn More</a>
         </div>
       </section>
 
-      {/*About section*/}
+      {/* About section */}
       <section className='about'>
         <h2>About our School</h2>
         <p>
-         Lenana Junior School Narok nurtures holistic learners in Grades 7, 8, and 9 through a supportive, 
-         inclusive CBC-based environment. We guide our learners in identifying their strengths, talents, and interests, 
-         preparing them to choose senior school pathways that align with their abilities and future aspirations.
+          Lenana Junior School Narok is a <strong>public school located in Narok North Sub-county</strong>.
+          We nurture holistic learners in<strong> Grade 7, 8, and 9 through a supportive, 
+          inclusive CBC-based environment.</strong>   We guide our learners in identifying their strengths, talents, and interests, 
+          preparing them to choose senior school pathways that align with their abilities and future aspirations.
         </p>
       </section>
 
-      {/*Academics */}
+      {/* Academics */}
       <section className='academics'>
         <h2>Academics</h2>
         <div className='academic-cards'>
-          <Link to="/academics/" className='card'>Sciences</Link>
-          <Link to="/academics/" className='card'>Mathematics</Link>
-          <Link to="/academics/" className='card'>Languages</Link>
-          <Link to="/academics/" className='card'>Humanities</Link>
-           <Link to="/academics/" className='card'>Technicals</Link>
-          <Link to="/academics/" className='card'>C. Art& Sports</Link>
+          <div className='card'>Sciences</div>
+          <div className='card'>Mathematics</div>
+          <div className='card'>Languages</div>
+          <div className='card'>Humanities</div>
+          <div className='card'>Technicals</div>
+          <div className='card'>C. Art & Sports</div>
         </div>
       </section>
 
-      {/*Gallery*/}
+      {/* Gallery */}
       <section className='gallery'>
         <h2>School Life</h2>
         <div className='gallery-images'>
-          <div className='gallery-images'>
-            {visibleImages.map((img, index) => (
-              <div key={index} className='gallery-image-wrapper' onClick={() => setExpandedImg(img)}>
-                <img src={img} alt={`Gallery ${index + 1}`} />
-              </div>
-            ))}
-          </div>
-
+          {visibleImages.map((img, index) => (
+            <div key={index} className='gallery-image-wrapper' onClick={() => setExpandedImg(img)}>
+              <img src={img} alt={`Gallery ${index + 1}`} />
+            </div>
+          ))}
         </div>
         <button className='see-more-btn' onClick={() => setShowAll(!showAll)}>
-          {!showAll ? 'See More' : 'See less'}
+          {!showAll ? 'See More' : 'See Less'}
         </button>
-
       </section>
 
+      {/* Expanded Image */}
       {expandedImg && (
         <div className='fullscreen-img' onClick={() => setExpandedImg(null)}>
           <img src={expandedImg} alt="Expanded view" />
         </div>
       )}
 
-
-      {/*Footer*/}
+      {/* Footer */}
       <footer className='footer'>
-        <p>© {new Date().getFullYear()} Lenana Junior School| Narok</p>
+        <p>© {new Date().getFullYear()} Lenana Junior School | Narok</p>
       </footer>
     </div>
-  );
+  )
 }
