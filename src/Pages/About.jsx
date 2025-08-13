@@ -9,7 +9,7 @@ export default function About() {
       <section className="about-hero animated-section">
         <div className="about-hero-text">
           <h1>About Us</h1>
-          <p>Shaping young minds for a brighter tomorrow.</p>
+          <p>Discipline and Exellence</p>
         </div>
       </section>
 
@@ -17,11 +17,11 @@ export default function About() {
       <section className="about-mission-vision animated-section">
         <div className="about-section">
           <h2>Our Mission</h2>
-          <p>To provide a nurturing environment that empowers learners to reach their full potential through quality, inclusive education.</p>
+          <p>To empower young Kenyans through quality Education.</p>
         </div>
         <div className="about-section">
           <h2>Our Vision</h2>
-          <p>To be a center of academic excellence and character development in the heart of Narok.</p>
+          <p>We are the Hill of Vision</p>
         </div>
       </section>
 
@@ -49,8 +49,8 @@ export default function About() {
         <h2>Our Core Values</h2>
         <ul>
           <li>Integrity</li>
-          <li>Inclusivity</li>
-          <li>Innovation</li>
+          <li>Proffessionalism</li>
+          <li>Team Work</li>
           <li>Respect</li>
           <li>Discipline</li>
         </ul>
@@ -59,7 +59,7 @@ export default function About() {
       {/* Link to Academics */}
       <section className="about-academics-link">
         <Link to="/academics" className="learn-more-btn">
-          Learn More About Our Academics
+          Our Academics
         </Link>
       </section>
     </div>

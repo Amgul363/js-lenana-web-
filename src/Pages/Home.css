@@ -5,11 +5,12 @@
   color: #333333;
 }
 
-/* Hero Section */
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 
 .hero-image {
@@ -24,6 +25,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: fadeUp 1.2s ease-out forwards;
 }
 
 .hero-text h1 {
@@ -37,18 +39,26 @@
 }
 
 .hero-text-btn {
-  background: #1540b4; /* Main blue */
+  background: #2a5298;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 4px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .hero-text-btn:hover {
-  background: #0f2f85; /* Darker blue hover */
+  background: #1e3d77;
+  transform: scale(1.05);
 }
 
-/* About Section */
+/* Animation: Fade in + slide up */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* ================= ABOUT SECTION ================= */
 .about {
   padding: 2rem;
   background: #f4f4f4;
@@ -56,7 +66,7 @@
 }
 
 .about h2 {
-  color: #1540b4;
+  color: #2a5298;
   margin-bottom: 1rem;
 }
 
@@ -66,7 +76,7 @@
   font-size: 1.1rem;
 }
 
-/* Academics Section */
+/* ================= ACADEMICS ================= */
 .academics {
   padding: 2rem;
   text-align: center;
@@ -80,22 +90,21 @@
 }
 
 .academic-cards .card {
-  background: #e6ecfa; /* Light blue background */
+  background: #dce3f4;
   padding: 1.2rem;
   border-radius: 8px;
   font-weight: bold;
-  color: #1540b4;
+  color: #2a5298;
   cursor: default;
-  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .academic-cards .card:hover {
-  background: #cfd9f5; /* Slightly darker light blue */
-  transform: scale(1.03);
-  transition: 0.3s ease;
+  background: #c4d0ee;
+  transform: scale(1.05);
 }
 
-/* Gallery Section */
+/* ================= GALLERY ================= */
 .gallery {
   padding: 2rem;
   text-align: center;
@@ -107,29 +116,39 @@
   gap: 1rem;
 }
 
+.gallery-image-wrapper {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
 .gallery-image-wrapper img {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gallery-image-wrapper img:hover {
+  transform: scale(1.08);
 }
 
 .see-more-btn {
   margin-top: 1rem;
   padding: 8px 16px;
-  background: #1540b4;
+  background: #2a5298;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .see-more-btn:hover {
-  background: #0f2f85;
+  background: #1e3d77;
+  transform: scale(1.05);
 }
 
-/* Fullscreen Image */
+/* ================= FULLSCREEN IMAGE ================= */
 .fullscreen-img {
   position: fixed;
   top: 0;
@@ -148,11 +167,74 @@
   max-height: 90%;
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 .footer {
-  padding: 1rem;
-  background: #1540b4;
+  background: #0d47a1;
   color: white;
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #1976d2;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.footer-section ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #90caf9;
+  transition: width 0.3s ease;
+}
+
+.footer-section ul li a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
   text-align: center;
-  margin-top: 2rem;
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.85rem;
 }

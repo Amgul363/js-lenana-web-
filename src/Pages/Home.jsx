@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {Link} from 'react-router-dom'
 import './Home.css'
 import hero from '../assets/Images/hero-placeholder.jpg'
 import gallery1 from '../assets/Images/gallery1.jpg'
@@ -75,9 +76,45 @@ export default function Home() {
       )}
 
       {/* Footer */}
-      <footer className='footer'>
-        <p>© {new Date().getFullYear()} Lenana Junior School | Narok</p>
-      </footer>
+      
+<footer className="footer">
+  <div className="footer-container">
+    {/* About Section */}
+    <div className="footer-section">
+      <h4>About Us</h4>
+      <p>
+        Our school is committed to academic excellence and nurturing
+        future leaders through quality education.
+      </p>
+    </div>
+
+    {/* Quick Links */}
+    <div className="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/academics">Academics</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+      </ul>
+    </div>
+
+    {/* Contact Info */}
+    <div className="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email:lenanajss@school.ac.ke</p>
+      <p>Phone: +254 712 345 678</p>
+      <p>Location: Narok, Kenya</p>
+    </div>
+  </div>
+
+  <div className="footer-bottom">
+    <p>© {new Date().getFullYear()} Our School. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
     </div>
   )
 }
