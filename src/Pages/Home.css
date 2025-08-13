@@ -1,6 +1,6 @@
 /* General */
 .homepage {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Arial', sans-serif;
   animation: fadeIn 1s ease-in;
 }
 
@@ -63,6 +63,9 @@
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+.about p{
+  font-weight: 500;
+}
 
 /* Academics Section */
 .academics {
@@ -77,6 +80,7 @@
   justify-content: center;
   gap: 1.5rem;
   margin-top: 20px;
+  font-weight: 500;
 }
 
 .card {

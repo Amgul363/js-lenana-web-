@@ -35,8 +35,9 @@ export default function Home() {
       <section className='about'>
         <h2>About our School</h2>
         <p>
-          Lenana Junior School Narok is dedicated to nurturing
-          holistic learners through a supportive and inclusive environment.
+         Lenana Junior School Narok nurtures holistic learners in Grades 7, 8, and 9 through a supportive, 
+         inclusive CBC-based environment. We guide our learners in identifying their strengths, talents, and interests, 
+         preparing them to choose senior school pathways that align with their abilities and future aspirations.
         </p>
       </section>
 
@@ -44,10 +45,12 @@ export default function Home() {
       <section className='academics'>
         <h2>Academics</h2>
         <div className='academic-cards'>
-          <Link to="/academics/sciences" className='card'>Sciences</Link>
-          <Link to="/academics/mathematics" className='card'>Mathematics</Link>
-          <Link to="/academics/languages" className='card'>Languages</Link>
-          <Link to="/academics/humanities" className='card'>Humanities</Link>
+          <Link to="/academics/" className='card'>Sciences</Link>
+          <Link to="/academics/" className='card'>Mathematics</Link>
+          <Link to="/academics/" className='card'>Languages</Link>
+          <Link to="/academics/" className='card'>Humanities</Link>
+           <Link to="/academics/" className='card'>Technicals</Link>
+          <Link to="/academics/" className='card'>C. Art& Sports</Link>
         </div>
       </section>
 

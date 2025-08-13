@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import './About.css';
-import aboutImage from '../assets/Images/about-page.jpg'; // Update this path if needed
 
 export default function About() {
   return (
@@ -30,12 +30,17 @@ export default function About() {
         <div className="about-text">
           <h2>Our Story</h2>
           <p>
-            Lenana Junior Secondary School was established to serve the growing educational needs of the Lenana community.
+            Lenana Junior School was established to serve the growing educational needs of the Lenana community.
             We are committed to offering a well-rounded curriculum that not only emphasizes academics but also social and emotional growth.
           </p>
         </div>
-        <div className="about-image">
-          <img src={aboutImage} alt="School Overview" />
+
+        <div className='about-text'>
+            <h2>Our Staff</h2>
+            <p>
+             Our staff is a dedicated team of passionate educators committed to guiding learners academically, socially, and emotionally.
+              Together, we create a supportive environment where every child can thrive.
+            </p>
         </div>
       </section>
 
@@ -49,6 +54,13 @@ export default function About() {
           <li>Respect</li>
           <li>Discipline</li>
         </ul>
+      </section>
+
+      {/* Link to Academics */}
+      <section className="about-academics-link">
+        <Link to="/academics" className="learn-more-btn">
+          Learn More About Our Academics
+        </Link>
       </section>
     </div>
   );
