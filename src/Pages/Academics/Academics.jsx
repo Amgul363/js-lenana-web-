@@ -23,7 +23,7 @@ export default function Academics() {
         <div className="subjects-cards">
           <div className="subject-card">
             <h3>Sciences</h3>
-            <p>Explore Integrated Science</p>
+            <p>Exploring Integrated Sciences</p>
           </div>
 
           <div className="subject-card">
@@ -43,12 +43,12 @@ export default function Academics() {
 
           <div className="subject-card">
             <h3>Technicals</h3>
-            <p>Explore Agriculture, Home Science and B. studies</p>
+            <p>Exploring Agriculture, Home Science and B. studies</p>
           </div>
 
           <div className="subject-card">
             <h3>C. Art & Sport</h3>
-            <p>Indulge in Creativity and Talents</p>
+            <p>Indulging in Creativity and Talents</p>
           </div>
         </div>
       </section>
