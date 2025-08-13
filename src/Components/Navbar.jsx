@@ -13,7 +13,6 @@ export default function Navbar(){
         <li><NavLink to="/" end>Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/academics">Academics</NavLink></li>
-        <li><NavLink to="/staff">Staff</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
     </nav>

@@ -1,209 +1,187 @@
-.homepage{
-  font-family:Arial, Helvetica, sans-serif;
-  color: rgb(33,37,41);
-  line-height: 1.6;
+/* General */
+.homepage {
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 1s ease-in;
 }
-.hero{
-  position:relative;
-  height: 400px;
-  width: 100%;
+
+/* Hero Section */
+.hero {
+  position: relative;
   overflow: hidden;
 }
 
-.hero-image{
+.hero-image {
   width: 100%;
-  height: 100%;
+  height: 70vh;
   object-fit: cover;
-  filter: brightness(30%);
+  filter: brightness(60%);
+  animation: zoomIn 4s ease-in-out infinite alternate;
 }
 
-.hero-text{
+.hero-text {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  color:white;
-  text-align: center;
-  padding: 20px;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #fff;
+  animation: slideDown 1s ease-in-out;
 }
 
-.hero-text h1{
-  font-size: 36px;
-  margin-bottom: 10px;
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
 }
 
-.hero-text p{
-  font-size: 18px;
-  margin-bottom: 20px;
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-
-.hero-text-btn{
-  background-color: rgb(30, 63, 99);
+.hero-text-btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
   text-decoration: none;
-  border:none;
-  color:white;
-  padding:10px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.hero-text-btn:hover{
-  background-color: rgb(0,105,217);
+.hero-text-btn:hover {
+  background-color: #2980b9;
 }
-
 
 /* About Section */
 .about {
-  padding: 40px 20px;
-  background-color: rgb(245, 245, 245);
+  padding: 60px 20px;
   text-align: center;
+  background: #f0f0f0;
+  animation: fadeInUp 1s ease;
 }
 
 .about h2 {
-  font-size: 28px;
-  color: rgb(0, 0, 102);
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* Academics */
+/* Academics Section */
 .academics {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
-}
-
-.academics h2 {
-  font-size: 28px;
-  color: rgb(0, 0, 102);
-  margin-bottom: 20px;
+  background: #e7f4fd;
 }
 
 .academic-cards {
   display: flex;
-  justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 20px;
 }
 
-.academic-cards .card {
-  background-color: rgb(220, 235, 255);
-  padding: 20px 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  color: rgb(0, 0, 51);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+.card {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #2c3e50;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Gallery */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Gallery Section */
 .gallery {
-  padding: 60px 20px;
-  background-color: #f7f9fc;
+  padding: 50px 20px;
   text-align: center;
-}
-
-.gallery h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #2a2a2a;
+  background: #fff;
 }
 
 .gallery-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  margin-top: 1rem;
-}
-
-
-/* Image container for zoom + expand */
-.gallery-image-wrapper {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 20px 0;
 }
 
 .gallery-image-wrapper img {
-  width: 100%;
-  height: 200px;
+  width: 200px;
+  height: 150px;
   object-fit: cover;
-  transition: transform 0.4s ease;
   border-radius: 10px;
-}
-
-/* Hover effect */
-.gallery-image-wrapper:hover img {
-  transform: scale(1.08);
-}
-
-/* Fullscreen image modal */
-.fullscreen-img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.fullscreen-img img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
-}
-
-.fullscreen-img:before {
-  content: '✖';
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
-  color: white;
   cursor: pointer;
+  transition: transform 0.4s ease;
 }
 
-
-.gallery-images img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.gallery-images img:hover {
+.gallery-image-wrapper img:hover {
   transform: scale(1.05);
 }
 
 .see-more-btn {
-  background-color: #005f73;
-  color: #fff;
+  padding: 10px 20px;
+  background-color: #3498db;
   border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 8px;
+  color: white;
   cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .see-more-btn:hover {
-  background-color: #0a9396;
+  background-color: #2980b9;
 }
 
+/* Fullscreen Image */
+.fullscreen-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fullscreen-img img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
 
 /* Footer */
 .footer {
-  background-color: rgb(0, 0, 51);
-  color: rgb(255, 255, 255);
+  background-color: #2c3e50;
+  color: white;
   text-align: center;
   padding: 20px;
-  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }

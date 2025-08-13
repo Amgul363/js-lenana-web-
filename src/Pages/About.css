@@ -1,0 +1,155 @@
+.about-page {
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f9ff;
+  color: #333;
+}
+
+/* Hero Section */
+.about-hero {
+  background-color: rgb(0, 102, 204);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.about-hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Mission and Vision */
+.about-mission-vision {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.about-section {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+  transform: scale(1.02);
+}
+
+/* Story Section */
+.about-story {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Core Values */
+.about-values {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.about-values h2 {
+  margin-bottom: 20px;
+}
+
+.about-values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-values li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: listFadeUp 0.6s ease forwards;
+}
+
+/* Stagger each value */
+.about-values li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.about-values li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.about-values li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.about-values li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.about-values li:nth-child(5) {
+  animation-delay: 1s;
+}
+
+/* Section Animation */
+.animated-section {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.animated-section:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+.animated-section:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+.animated-section:nth-of-type(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes listFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-story {
+    flex-direction: column;
+  }
+}

@@ -25,7 +25,7 @@ export default function Home() {
       <section className='hero'>
         <img src={hero} alt='Hero' className="hero-image" />
         <div className='hero-text'>
-          <h1>Welcome to Lenana Junior Sec School Narok</h1>
+          <h1>Welcome to Lenana Junior School Narok</h1>
           <p>We empower young Kenyans through quality education</p>
           <Link to="/about" className='hero-text-btn'>Learn More</Link>
         </div>
@@ -35,7 +35,7 @@ export default function Home() {
       <section className='about'>
         <h2>About our School</h2>
         <p>
-          Lenana Junior Secondary School is dedicated to nurturing
+          Lenana Junior School Narok is dedicated to nurturing
           holistic learners through a supportive and inclusive environment.
         </p>
       </section>
@@ -79,7 +79,7 @@ export default function Home() {
 
       {/*Footer*/}
       <footer className='footer'>
-        <p>© {new Date().getFullYear()} Lenana Junior Sec School| Narok</p>
+        <p>© {new Date().getFullYear()} Lenana Junior School| Narok</p>
       </footer>
     </div>
   );
