@@ -6,7 +6,7 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename='"/js-lenana-web"'>
+    <BrowserRouter basename="/js-lenana-web">
       <App />
     </BrowserRouter>
 
